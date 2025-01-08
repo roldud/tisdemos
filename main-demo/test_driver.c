@@ -72,7 +72,7 @@ int test_array(int *in_array, int len)
 TEST_0001: verify with small array
 Uptrace: REQ_0123
 */
-int test_small_array()
+int test_small_array(void)
 {
     int input_array[] = {1, 3, 5, 7, 11, 13, 17};
     int len = sizeof(input_array) / sizeof(int);
@@ -83,7 +83,7 @@ int test_small_array()
 TEST_0002: verify with big array
 Uptrace: REQ_0123
 */
-int test_large_array()
+int test_large_array(void)
 {
     int input_array[1000];
     for (int i = 0; i < 1000; i++)
@@ -96,7 +96,7 @@ int test_large_array()
 TEST_0003: test of empty array (GNU extension)
 Uptrace: REQ_0123
 */
-int test_zero_length()
+int test_zero_length(void)
 {
     int p[] = {};
     return test_array(p, 0);
@@ -106,18 +106,17 @@ int test_zero_length()
 TEST_0004: test of NULL
 Uptrace: REQ_0123
 */
-int test_null()
+int test_null(void)
 {
     int *p = NULL;
     return test_array(p, 777);
 }
 
 #ifdef __TRUSTINSOFT_ANALYZER__
-/*
-TEST_ROBUSTNESS_0005: verify all entries in a big array
+/* TEST_ROBUSTNESS_0005: verify all entries in a big array
 Uptrace: REQ_0123
 */
-void test_generalized_array()
+void test_generalized_array(void)
 {
     int input_array[1000];
     // This corresponds to 2^32^1000 combinations
@@ -131,7 +130,7 @@ void test_generalized_array()
 
 #endif
 
-int main()
+int main(void)
 {
 
     int ok = 1;
