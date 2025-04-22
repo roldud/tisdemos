@@ -1,0 +1,8 @@
+{
+  "files": [
+    "../increment.c",
+    "../test_driver.c",
+    "../Unity/src/unity.c"
+  ],
+  "prefix_path": ".."
+}
