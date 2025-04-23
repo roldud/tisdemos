@@ -1,0 +1,44 @@
+[
+    {
+        "prefix_path": "/home/rolland/src/tisdemos/autosar/v1",
+        "name": "ConsumptionApplication_EstimateConsumption",
+        "files": [
+            "trustinsoft/rte_stubs.c"
+        ],
+        "integer-constants": "c99clang",
+        "tis-report": true,
+        "memexec-all": true,
+        "slevel": "100",
+        "val-split-return": "full",
+        "val-slevel-merge-after-loop": "-@all",
+        "main": "EstimateConsumption",
+        "cpp-extra-args": "-Itrustinsoft -I/home/tis/2024.10/share/tis-kernel/rte_runtime -D__TRUSTINSOFT_HEADERS__ -Itrustinsoft -DAUTOSAR_VERSION=50",
+        "val": true,
+        "val-profile": "analyzer",
+        "val-split-return-function": {
+            "Rte_Read_TankPort_currentTankInML": "full",
+            "Rte_Read_TankPort_lastTankInML": "full",
+            "Rte_Read_TravelPort_estimatedKMRemaining": "full",
+            "Rte_Write_TankPort_lastTankInML": "full",
+            "Rte_Write_TravelPort_estimatedConsumption": "full",
+            "tis_autosar_unknown_sint32": "full",
+            "tis_autosar_constraint_tank_contenant_sint32": "full",
+            "tis_autosar_unknown_sint16": "full",
+            "tis_autosar_constraint_zero_to_thousand_sint16": "full",
+            "tis_autosar_constraint_zero_to_max_sint32": "full"
+        },
+        "slevel-function": {
+            "Rte_Read_TankPort_currentTankInML": 100,
+            "Rte_Read_TankPort_lastTankInML": 100,
+            "Rte_Read_TravelPort_estimatedKMRemaining": 100,
+            "Rte_Write_TankPort_lastTankInML": 100,
+            "Rte_Write_TravelPort_estimatedConsumption": 100,
+            "tis_autosar_unknown_sint32": 100,
+            "tis_autosar_constraint_tank_contenant_sint32": 100,
+            "tis_autosar_unknown_sint16": 100,
+            "tis_autosar_constraint_zero_to_thousand_sint16": 100,
+            "tis_autosar_constraint_zero_to_max_sint32": 100
+        },
+        "include": "persistent_config.json"
+    }
+]

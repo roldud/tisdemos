@@ -1,0 +1,1 @@
+// Empty file. MemMap macro are not used in the context of tis-autosar.
