@@ -245,4 +245,4 @@ TrustInSoft analyzer is an excellent complement to also bring mathematical guara
 
 Reach out to us through https://trust-in-soft.com/contact/ if you would like to know more about our product.
 
-*Copyright (C) 2022-2024 TrustInSoft*
+*Copyright (C) 2022-2025 TrustInSoft*
